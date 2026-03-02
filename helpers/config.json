@@ -1,0 +1,381 @@
+{
+    "input_data":{
+        "ada_datastream": {
+            "path": "ods.adastream.test_12vbatt_diags_na_tbm",
+            "cols_to_load": [
+                "vin",
+                "app_timestamp",
+                "shift2park",
+                "tbm_keyon",
+                "tbm_keyoff",
+                "latitude_pos", 
+                "longitude_pos", 
+                "totalodometer", 
+                "batteryvoltagelevel", 
+                "dt"
+            ], 
+            "cols_to_ffill": [ 
+                "batteryvoltagelevel", 
+                "tbm_keyon"
+            ]
+        },
+        "vehicle_data": "gadp_cdm.ods_cdm_vehicle.mfg_main_characteristics"
+    },
+    "paths":{
+        "conversions": "conversions/"
+    },
+    "diagnostic_messages":{
+       "A001": {
+            "column_name": "ibs_tcsm_22a001",
+            "ecu": "BCM",
+            "columns": {
+                "IBS3 - IBS_Fast2 - IBS3_Rbatt": {
+                    "type": "float",
+                    "clean_name": "IBS3_Rbatt"
+                },
+                "IBS3 - IBS_Fast2 - IBS3_Rbatt_25": {
+                    "type": "float",
+                    "clean_name": "IBS3_Rbatt_25"
+                },
+                "IBS3 - IBS_Slow1 - IBS3_SOH_SUL": {
+                    "type": "float",
+                    "clean_name": "IBS3_SOH_SUL"
+                },
+                "IBS3 - IBS_Slow1 - IBS3_SOH_SUL_Accuracy": {
+                    "type": "string",
+                    "clean_name": "IBS3_SOH_SUL_Accuracy"
+                },
+                "IBS3 - IBS_Slow2 - IBS3_Q_Received": {
+                    "type": "float",
+                    "clean_name": "IBS3_Q_Received"
+                },
+                "IBS3 - IBS_Slow2 - IBS3_Q_Released": {
+                    "type": "float", 
+                    "clean_name": "IBS3_Q_Released"   
+                },
+                "IBS3 - IBS_Slow1 - IBS3_SOC": {
+                    "type": "float",
+                    "clean_name": "IBS3_SOC"   
+                },
+                "IBS3 - IBS_Slow1 - IBS3_SOC_Accuracy": {
+                    "type": "string",
+                    "clean_name": "IBS3_SOC_Accuracy"   
+                },
+                "IBS3 - IBS_Fast1 - IBS3_Ibatt": {
+                    "type": "float",
+                    "clean_name": "IBS3_Ibatt"   
+                },
+                "IBS3 - IBS_Fast1 - IBS3_Vbatt": {
+                    "type": "float",
+                    "clean_name": "IBS3_Vbatt"   
+                },
+                "IBS3 - IBS_Slow1 - IBS3_T_BATT": {
+                    "type": "float",
+                    "clean_name": "IBS3_Tbatt"   
+                }
+            }, 
+            "versions": {
+                "KM": {
+                    "2024": { "length": 178 }
+                },
+                "DT": {
+                    "2024": { "length": 184 },
+                    "2025": { "length": 184 },
+                    "2025": { "length": 184 }
+                },
+                "LB": {
+                    "2024": { "length": 178 }
+                },
+                "WL": {
+                    "2024": { "length": 136 }
+                },
+                "WS": {
+                    "2025": { "length": 136 }
+                }
+            }
+        }, 
+        "A007": {
+            "column_name": "ibs_tcsm_22a007",
+            "ecu": "BCM",
+            "columns": {
+                "IBS3_2- IBS_Fast2_2- IBS3_Rbatt_2": {
+                    "type": "float",
+                    "clean_name": "IBS3_Rbatt_2"
+                },
+                "IBS3_2- IBS_Fast2_2- IBS3_Rbatt_25_2": {
+                    "type": "float",
+                    "clean_name": "IBS3_Rbatt_25_2"
+                },
+                "IBS3_2- IBS_Slow1_2- IBS3_SOH_SUL_2": {
+                    "type": "float",
+                    "clean_name": "IBS3_SOH_SUL_2"
+                },
+                "IBS3_2- IBS_Slow1_2- IBS3_SOH_SUL_Accuracy_2": {
+                    "type": "string",
+                    "clean_name": "IBS3_SOH_SUL_Accuracy_2"
+                },
+                "IBS3_2- IBS_Slow2_2- IBS3_Q_Received_2": {
+                    "type": "string",
+                    "clean_name": "IBS3_Q_Received_2"
+                },
+                "IBS3_2- IBS_Slow2_2-IBS3_Q_Released_2": {
+                    "type": "float",
+                    "clean_name": "IBS3_Q_Released_2"
+                },
+                "IBS3_2- IBS_Slow1_2- IBS3_SOC_2": {
+                    "type": "float",
+                    "clean_name": "IBS3_SOC_2"
+                },
+                "IBS3_2- IBS_Slow1_2- IBS3_SOC_Accuracy_2": {
+                    "type": "string",
+                    "clean_name": "IBS3_SOC_Accuracy_2"
+                },
+                "IBS3_2-IBS_Fast1_2-IBS3_Ibatt_2": {
+                    "type": "float",
+                    "clean_name": "IBS3_Ibatt_2"
+                },
+                "IBS3_2-IBS_Fast1_2-IBS3_Vbatt_2": {
+                    "type": "float",
+                    "clean_name": "IBS3_Vbatt_2"
+                },
+                "IBS3_2- IBS_Slow1_2- IBS3_T_BATT_2": {
+                    "type": "float",
+                    "clean_name": "IBS3_T_BATT_2"
+                },
+                "DBSM2-DBSM2_A1-BATTERY2_voltage": {
+                    "type": "float",
+                    "clean_name": "BATTERY2_voltage"
+                },
+                "DBSM2-DBSM2_A1-BATTERY_voltage": {
+                    "type": "float",
+                    "clean_name": "BATTERY_voltage"
+                },
+                "DBSM2-DBSM2_A1-switch_status_OpenClose": {
+                    "type": "string",
+                    "clean_name": "switch_status_OpenClose"
+                }
+            }, 
+            "versions": {
+                "KM": {
+                    "2024": { "length": 182 }
+                },
+                "DT": {
+                    "2024": { "length": 182 },
+                    "2025": { "length": 182 },
+                    "2026": { "length": 182 }                    
+                },
+                "LB": {
+                    "2024": { "length": 178 }
+                },
+                "WL": {
+                    "2024": { "length": 206 }
+                },
+                "WS": {
+                    "2025": { "length": 206 }
+                }
+            }
+        },
+        "2947": {
+            "column_name": "bcmfd_222947",
+            "ecu": "BCM",
+            "columns": {
+                "Last Wake Up reason": {
+                    "type": "string",
+                    "clean_name": "last_wake_up_reason"
+                },
+                "Past Wake-up Condition number 1": {
+                    "type": "string",
+                    "clean_name": "wakeup_reason_01"
+                },
+                "Past Wake-up Condition number 2": {
+                    "type": "string",
+                    "clean_name": "wakeup_reason_02"
+                },
+                "Past Wake-up Condition number 3": {
+                    "type": "string",
+                    "clean_name": "wakeup_reason_03"
+                },
+                "Past Wake-up Condition number 4": {
+                    "type": "string",
+                    "clean_name": "wakeup_reason_0"
+                },
+                "Past Wake-up Condition number 5": {
+                    "type": "string",
+                    "clean_name": "wakeup_reason_05"
+                },
+                "Past Wake-up Condition number 6": {
+                    "type": "string",
+                    "clean_name": "wakeup_reason_06"
+                },
+                "Past Wake-up Condition number 7": {
+                    "type": "string",
+                    "clean_name": "wakeup_reason_07"
+                },
+                "Past Wake-up Condition number 8": {
+                    "type": "string",
+                    "clean_name": "wakeup_reason_08"
+                },
+                "Past Wake-up Condition number 9": {
+                    "type": "string",
+                    "clean_name": "wakeup_reason_09"
+                },
+                "Past Wake-up Condition number 10": {
+                    "type": "string",
+                    "clean_name": "wakeup_reason_10"
+                },
+                "Past Wake-up Condition number 11": {
+                    "type": "string",
+                    "clean_name": "wakeup_reason_11"
+                },
+                "Past Wake-up Condition number 12": {
+                    "type": "string",
+                    "clean_name": "wakeup_reason_12"
+                },
+                "Past Wake-up Condition number 13": {
+                    "type": "string",
+                    "clean_name": "wakeup_reason_14"
+                },
+                "Past Wake-up Condition number 15": {
+                    "type": "string",
+                    "clean_name": "wakeup_reason_15"
+                },
+                "Past Wake-up Condition number 16": {
+                    "type": "string",
+                    "clean_name": "wakeup_reason_16"
+                },
+                "Past Wake-up Condition number 17": {
+                    "type": "string",
+                    "clean_name": "wakeup_reason_17"
+                },
+                "Past Wake-up Condition number 18": {
+                    "type": "string",
+                    "clean_name": "wakeup_reason_18"
+                },
+                "Past Wake-up Condition number 19": {
+                    "type": "string",
+                    "clean_name": "wakeup_reason_19"
+                }
+            },
+            "versions": {
+                "KM": {
+                    "2024": { "length": 0 }
+                },
+                "DT": {
+                    "2024": { "length": 46 },
+                    "2025": { "length": 46 },
+                    "2025": { "length": 46 }
+                },
+                "LB": {
+                    "2024": { "length": 0 }
+                },
+                "WL": {
+                    "2024": { "length": 0 }
+                },
+                "WS": {
+                    "2025": { "length": 46 }
+                }
+            }
+        },
+        "2948": {
+            "column_name": "bcmfd_222948",
+            "ecu": "BCM",
+            "columns": {
+                "Current Stay Awake Condition number 1": {
+                    "type": "string",
+                    "clean_name": "stay_awake_reason_01"
+                },
+                "Current Stay Awake Condition number 2": {
+                    "type": "string",
+                    "clean_name": "stay_awake_reason_02"
+                },
+                "Current Stay Awake Condition number 3": {
+                    "type": "string",
+                    "clean_name": "stay_awake_reason_03"
+                },
+                "Current Stay Awake Condition number 4": {
+                    "type": "string",
+                    "clean_name": "stay_awake_reason_0"
+                },
+                "Current Stay Awake Condition number5": {
+                    "type": "string",
+                    "clean_name": "stay_awake_reason_05"
+                },
+                "Current Stay Awake Condition number 6": {
+                    "type": "string",
+                    "clean_name": "stay_awake_reason_06"
+                },
+                "Current Stay Awake Condition number 7": {
+                    "type": "string",
+                    "clean_name": "stay_awake_reason_07"
+                },
+                "Current Stay Awake Condition number 8": {
+                    "type": "string",
+                    "clean_name": "stay_awake_reason_08"
+                },
+                "Current Stay Awake Condition number 9": {
+                    "type": "string",
+                    "clean_name": "stay_awake_reason_09"
+                },
+                "Current Stay Awake Condition number 10": {
+                    "type": "string",
+                    "clean_name": "stay_awake_reason_10"
+                },
+                "Current Stay Awake Condition number 11": {
+                    "type": "string",
+                    "clean_name": "stay_awake_reason_11"
+                },
+                "Current Stay Awake Condition number 12": {
+                    "type": "string",
+                    "clean_name": "stay_awake_reason_12"
+                },
+                "Current Stay Awake Condition number 13": {
+                    "type": "string",
+                    "clean_name": "stay_awake_reason_14"
+                },
+                "Current Stay Awake Condition number 15": {
+                    "type": "string",
+                    "clean_name": "stay_awake_reason_15"
+                },
+                "Current Stay Awake Condition number 16": {
+                    "type": "string",
+                    "clean_name": "stay_awake_reason_16"
+                },
+                "Current Stay Awake Condition number 17": {
+                    "type": "string",
+                    "clean_name": "stay_awake_reason_17"
+                },
+                "Current Stay Awake Condition number 18": {
+                    "type": "string",
+                    "clean_name": "stay_awake_reason_18"
+                },
+                "Current Stay Awake Condition number 19": {
+                    "type": "string",
+                    "clean_name": "stay_awake_reason_19"
+                },
+                "Current Stay Awake Condition number 20": {
+                    "type": "string",
+                    "clean_name": "stay_awake_reason_20"
+                }
+            },
+            "versions": {
+                "KM": {
+                    "2024": { "length": 0 }
+                },
+                "DT": {
+                    "2024": { "length": 46 },
+                    "2025": { "length": 46 },
+                    "2025": { "length": 46 }
+                },
+                "LB": {
+                    "2024": { "length": 0 }
+                },
+                "WL": {
+                    "2024": { "length": 0 }
+                },
+                "WS": {
+                    "2025": { "length": 46 }
+                }
+            }
+        }
+    }
+}
